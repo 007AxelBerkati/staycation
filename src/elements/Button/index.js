@@ -25,10 +25,12 @@ export default function Button(props) {
         style={props.style}
       >
         {
-          props.isLoading ? <>
-            <span className="spinner-border spinner-border-sm mx-5" ></span>
-            <span className="sr-only">Loading....</span>
-          </>
+          props.isLoading ? (
+            <>
+              <span className="spinner-border spinner-border-sm mx-5" />
+              <span className="sr-only">Loading....</span>
+            </>
+          ) : (props.children)
         }
       </span>
     );
@@ -63,6 +65,7 @@ export default function Button(props) {
   }
 
   return (
+    // eslint-disable-next-line react/button-has-type
     <button
       className={className.join(" ")}
       style={props.style}
