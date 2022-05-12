@@ -1,9 +1,8 @@
 /* eslint-disable react/require-default-props */
 /* eslint-disable react/destructuring-assignment */
+import propTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
-import propTypes from "prop-types";
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 export default function Button(props) {
   const className = [props.className];
@@ -84,6 +83,7 @@ Button.propTypes = {
   href: propTypes.string,
   className: propTypes.string,
   isDisabled: propTypes.bool,
+  isExternal: propTypes.bool,
   isLoading: propTypes.bool,
   isSmall: propTypes.bool,
   isLarge: propTypes.bool,
